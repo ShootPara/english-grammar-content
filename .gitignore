@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+tmp/
+review_baselines/
+*.pdf
+GRAMMAR_BOOK_REMEDIATION_COMPLETION.txt
+GRAMMAR_BOOK_REVIEW_AND_REMEDIATION_PLAN.txt
+.DS_Store
+Thumbs.db
