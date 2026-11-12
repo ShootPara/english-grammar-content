@@ -14,7 +14,7 @@ This repository contains reusable English grammar content. Read README.md for th
 - Recalculate affected formatting and response target offsets when changing text. Offsets count Unicode code points, not UTF-16 units.
 - Reconcile affected instructions, answer parts, alternatives, context, and word-bank references together.
 - Preserve deliberate grammatical errors in correction exercises and distractors in choice exercises.
-- Keep the answer key embedded in the JSON. Do not produce a separate answer-key artifact.
+- Keep the authoritative answer key embedded in the JSON. The requested PDF includes a rendered answer-key appendix generated from those entries.
 - Keep historical branding, attribution, publication front matter, and project identity out of the reusable JSON. The README and original Word file provide provenance. Ordinary exercise sentences about books or fictional people are instructional content and should remain.
 - Keep the embedded schema and `GRAMMAR_BOOK_JSON_SPEC.md` synchronized when changing the format. Update declared counts and versions when appropriate.
 - Do not add layout assumptions or automatic-grading claims to the content without an explicit implementation and validation plan.
@@ -29,4 +29,4 @@ python validate_grammar_book.py --self-test --source "Grammar Book First Draft C
 
 For content changes, also inspect the affected lesson, its instructions, and its answer-key entries together. Passing schema validation alone does not establish instructional correctness.
 
-Do not commit temporary renderings, diagnostic PDFs, local environments, historical review snapshots, or credentials. This is a data repository, not a complete exercise application.
+Do not commit temporary renderings, old diagnostic PDFs, local environments, historical review snapshots, or credentials. The published practice PDF under output/pdf is an intentional deliverable. This is a data repository, not a complete exercise application.

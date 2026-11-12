@@ -7,6 +7,7 @@ venv/
 tmp/
 review_baselines/
 *.pdf
+!output/pdf/English Grammar - Practice and Answers.pdf
 GRAMMAR_BOOK_REMEDIATION_COMPLETION.txt
 GRAMMAR_BOOK_REVIEW_AND_REMEDIATION_PLAN.txt
 .DS_Store

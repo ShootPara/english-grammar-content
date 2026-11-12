@@ -25,7 +25,7 @@ The JSON is platform-neutral data that coding agents and platforms can ingest to
 
 The content contains **15 sections, 115 lessons, 231 indexed activities, 1,704 indexed items, 1,704 answer-key entries, and 1,841 response components**. There are 45 worked examples. An item can require several responses, so an item is not necessarily one sentence or one blank.
 
-The historical filenames are retained for continuity. Version 3 is a reusable content collection, with no dependency on the original project's branding or page layout. Earlier drafts, temporary files, review reports, and the diagnostic PDF are excluded from this repository.
+The historical filenames are retained for continuity. Version 3 is a reusable content collection, with no dependency on the original project's branding or page layout. Earlier drafts, temporary files, review reports, and the old diagnostic PDF are excluded from this repository.
 
 ## Start here, coding agents
 
@@ -68,3 +68,18 @@ b366a1f1e938eba4002f9084eab5351d5e168300ddb4323a78c63f25d546bbbe
 ```
 
 Source block IDs and `body_block` positions retain their original locations. They are intentionally not renumbered after removal of the front matter. Use explicit references rather than array-index arithmetic.
+
+## Practice PDF
+
+[Download the practice collection with answers](<output/pdf/English Grammar - Practice and Answers.pdf>).
+
+The PDF includes a cover, clickable contents, all lessons and exercises, writing space, and an answer-key appendix. Exercise references match the answers. It is generated from the current JSON rather than the original Word document.
+
+To rebuild on Windows:
+
+```sh
+python -m pip install -r requirements-pdf.txt
+python scripts/build_pdf.py
+```
+
+The generator uses Arial regular, bold, italic, and bold italic from `C:/Windows/Fonts`. On another system, set `GRAMMAR_FONT_DIR` to a directory containing `arial.ttf`, `arialbd.ttf`, `ariali.ttf`, and `arialbi.ttf`. Fonts are not bundled in this repository. Render and visually check any rebuilt PDF before publishing it.
