@@ -69,6 +69,12 @@ b366a1f1e938eba4002f9084eab5351d5e168300ddb4323a78c63f25d546bbbe
 
 Source block IDs and `body_block` positions retain their original locations. They are intentionally not renumbered after removal of the front matter. Use explicit references rather than array-index arithmetic.
 
+## Automatic validation on GitHub
+
+The [Validate grammar content workflow](.github/workflows/validate.yml) runs the same validator on every push and pull request. It checks the JSON's structure, references, and answer bindings, tests that deliberately corrupted data is rejected, and checks provenance against the original Word manuscript.
+
+See [GitHub Actions](https://github.com/ShootPara/english-grammar-content/actions/workflows/validate.yml) for results and failure logs. A passing run confirms the automated integrity checks passed; it does not replace editorial review of the grammar or answer key.
+
 ## Practice PDF
 
 [Download the practice collection with answers](<output/pdf/English Grammar - Practice and Answers.pdf>).
